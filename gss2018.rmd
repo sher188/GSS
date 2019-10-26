@@ -41,21 +41,23 @@ This data is from the 2018 General Social Survey. The first blocks of R-code has
 
 ## Methods
 
-<!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!--> the methods i will plant to use is the 
+<!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!--> the methods i will plan to use are graphical and numerical diagrams.
 
 ##Results
 
-<!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
+<!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!--> 
 
 ### Descriptive Results
-you can be able to tell by the results that 
+you can be able to tell by the results that the percent of people who oppose is greater than the people who favor. 
 #### Graphical Descriptive Results
 
-<!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+<!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!--> 
 ```{r}
 barchartGC(~CAPPUN + OWNGUN,data=mydata4)
 barchartGC(~CAPPUN + OWNGUN,data=mydata4, type =  "percent")
 ```
+the barchart is showing that the people who favor the death penalty are 50/50 on owning a gun. among those who oppose the death penalty far fewer of them own a gun, less than 50%. that suggets that there is a relationship between opinion on capital punishment and gun ownership.
+
 
 #### Numerical Descriptive Results
 
@@ -70,7 +72,8 @@ colPerc(table1)
 
 ### Inferential Results
 
-<!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!--> i reject the null hypothesis because the percent is low.
+<!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!--> i reject the null hypothesis because the percent is low. the p value is 0.0008996 <0.02
+```{r}
 ```{r}
 chisq.test(table1)
 chisqtestGC(table1)
@@ -85,17 +88,18 @@ Now answer Is belief in the bigbang theory (BIGBANG) independent of belief in th
 
 ## Methods
 
-<!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
+<!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!--> methods i will use are the graphical and numerical diagrams to allow the data given be sectioned by people who oppose the big bang theory or favor the postlife.
 
 ##Results
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
 
 ### Descriptive Results
+the data will show peoples share of whether or not they oppose or favor the postlife.
 
 #### Graphical Descriptive Results
 
-<!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!--> 
+<!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!--> by the graph, the results youe see are that people favor the big bang theory rather than the postlife. however in the second chart people who favor the postlife is greater than people who favor the big bang theory.
 
 ```{r}
 ```{r}
@@ -103,12 +107,16 @@ barchartGC(~BIGBANG + POSTLIFE,data=mydata4)
 barchartGC(~BIGBANG + POSTLIFE,data=mydata4, type ="percent")
 ```
 ```
+the barchart is showing that the people who have belief in the big bang theory is higher than the postlife theory. the death penalty are 50/50 on owning a gun. among those who beleive in the big bang theory rather than the postlife are far higher, more than 50% that suggets that there is a relationship between opinion on the belief of bigbang theory and the postlife.
+
+
+
 the numerical evidence shows that people have a belief towards the big bang is higher as peeople beleive in the theory. hwoever there are people who dont beleive in it so the false statement is grwater than the true statement.
 
 
 #### Numerical Descriptive Results
 
-<!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+<!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!--> the percent of people who are asked if they favor the big bang theory is greater than post life. the percent of data of people who favor the post life is greater then those who oppose it. 
 
 ```{r}
 ```{r}
@@ -121,7 +129,7 @@ colPerc(table1)
 
 ### Inferential Results
 
-<!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
+<!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!--> i reject the null hypothesis because the data is showing that the P Value is lower, the p value is .0009 < .04 
 
 ```{r}
 chisq.test(table1)
@@ -132,33 +140,36 @@ fisher.test(table1)
 
 # Introduction Question 3
 
-<!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?!-->
+<!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?!--> what im trying to show for questions three is tell whether whether people pf race support or oppose the death penalty.
 
 Finally determine if a persons opinion on death penalty (CAPPUN) is independent of their race (RACE).
 
 ## Methods
 
-<!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
+<!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!--> methods that wll be used are the graphical and numerical diagrams and with a chisq test.table.
 
 ##Results
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
 
 ### Descriptive Results
+the grahical , numerical ad chisq test will allow the data to be perceived tell whether each race is dependent on faavoriing the death penalty.
 
 #### Graphical Descriptive Results
 
-<!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+<!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!--> by the graphical results you can tell that each race is dependent of their opinion. 
 ```{r}
 ```{r}
 barchartGC(~CAPPUN + RACE,data=mydata4)
 barchartGC(~CAPPUN + RACE,data=mydata4, type ="percent")
 ```
 ```
+the barchart is showing that the people who favor the death penalty the highest is the white race. among those who oppose the death penalty in any other race is less than 50%. that suggets that there is a relationship between opinion on capital punishment and dependant on race.
+
 
 #### Numerical Descriptive Results
 
-<!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+<!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!--> the numerical statistics show that the white race has the highest favor for the death penalty. meanwhile the blacks and others have very low numbers. in the second table it shows that the other race is higher in favor but the oppose is lower for all races compared to the first table.
 ```{r}
 ```{r}
 table1 <- xtabs(~CAPPUN + RACE,data=mydata4)
@@ -171,7 +182,7 @@ colPerc(table1)
 
 ### Inferential Results
 
-<!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
+<!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!--> i reject the null hypothesis because the p value is lower than the df. 0.02022< 1
 ```{r}
 chisq.test(table1)
 chisqtestGC(table1)
@@ -180,5 +191,11 @@ chisqtestGC(table1)
 
 # Discussion and Conclusion
 
-<!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+<!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!--> the people who favor the death penalty are 50/50 on owning a gun. among those who oppose the death penalty far fewer of them own a gun, less than 50%. that suggets that there is a relationship between opinion on capital punishment and gun ownership.
+i reject the null hypothesis for the capital punishment and gun ownership because the percent is low.the p value is 0.0008996 <0.02 for the capital punishment and gun ownership.
+  
+  the people who have belief in the big bang theory is higher than the postlife theory. the death penalty are 50/50 on owning a gun. among those who beleive in the big bang theory rather than the postlife are far higher, more than 50% that suggets that there is a relationship between opinion on the belief of bigbang theory and the postlife.  i reject the null hypothesis for the bibg bang theory and postlife belief because the data is showing that the P Value is lower, the p value is .0009 < .04.
+    
+   the people who favor the death penalty the highest is the white race. among those who oppose the death penalty in any other race is less than 50%. that suggets that there is a relationship between opinion on capital punishment and dependant on race.i reject the null hypothesis for the dependant of each race who oppose or favor the death penalty because the p value is lower than the df. 0.02022< 1
+
 
